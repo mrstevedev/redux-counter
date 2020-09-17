@@ -17,3 +17,10 @@ export const logIn = () => {
     type: "SIGN_IN",
   };
 };
+
+export const addTodo = (text) => {
+  return {
+    type: 'ADD_TODO',
+    payload: text
+  };
+};
