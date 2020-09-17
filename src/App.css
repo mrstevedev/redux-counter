@@ -14,17 +14,33 @@ body {
 
 button {
   background: #257cff;
-  padding: 0.5rem 2rem;
+  padding: 0.4rem 1.4rem;
   border: none;
   outline: none;
   margin: 0 0.3rem;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border-radius: 4px;
   transition: .12s ease-in-out;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 button:hover {
   background: #3d88f8
+}
+
+input[type="text"] {
+  background: #212121;
+  border: none;
+  height: 26px;
+  border-radius: 4px;
+  outline: none;
+  color: #fff;
+  text-indent: 7px;
+  transition: .12s ease-in-out;
+}
+
+input[type="text"]:hover {
+  background: #333;
 }
