@@ -19,6 +19,11 @@ function App() {
         <button onClick={() => dispatch(logIn())}>Sign in</button>
       </div>
       {isLogged ? <p>Logged in info here</p> : ""}
+      <form>
+        <h4>Add Todo</h4>
+        <input type="text" id="todo" name="todo" />
+        <button type="button">Add Todo</button>
+      </form>
     </div>
   );
 }
