@@ -1,36 +1,41 @@
-import { v4 } from 'node-uuid';
-import { ADD_TODO, TOGGLE_TODO } from '../constants/actionTypes';
+import { v4 } from "node-uuid";
+import {
+  INCREMENT,
+  DECREMENT,
+  SIGN_IN,
+  ADD_TODO,
+  TOGGLE_TODO,
+} from "../constants/actionTypes";
 
 // ACTIONS
 export const increment = (n) => {
   return {
-    type: "INCREMENT",
+    type: INCREMENT,
     payload: n,
   };
 };
 
 export const decrement = () => {
   return {
-    type: "DECREMENT",
+    type: DECREMENT,
   };
 };
 
 export const logIn = () => {
   return {
-    type: "SIGN_IN",
+    type: SIGN_IN,
   };
 };
 
 export const addTodo = (text) => ({
   id: v4(),
   type: ADD_TODO,
-  payload: text
+  payload: text,
 });
-
 
 export const toggleTodo = (id) => {
   return {
     type: TOGGLE_TODO,
     payload: id,
-  }
+  };
 };
