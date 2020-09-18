@@ -19,11 +19,10 @@ button {
   outline: none;
   margin: 0 0.3rem;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   border-radius: 4px;
   transition: .12s ease-in-out;
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 button:hover {
