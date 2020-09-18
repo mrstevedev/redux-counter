@@ -11,6 +11,7 @@ function TodoList ({ todos }) {
             key={todo.id}
             id={todo.id}
             todo={todo.todo}
+            completed={todo.completed}
           />
         ))}
       </ul>
