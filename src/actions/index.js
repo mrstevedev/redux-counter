@@ -1,4 +1,5 @@
 import { v4 } from 'node-uuid';
+import { ADD_TODO } from '../constants/actionTypes';
 
 // ACTIONS
 export const increment = (n) => {
@@ -24,7 +25,7 @@ let nextTodoId = 0;
 
 export const addTodo = (text) => ({
   id: v4(),
-  type: "ADD_TODO",
+  type: ADD_TODO,
   payload: text
 });
 
