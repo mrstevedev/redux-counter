@@ -1,16 +1,22 @@
+import { v4 } from "uuid";
+
 const todos = (state = [], action) => {
-    switch(action.type) {
-        case 'ADD_TODO':
-            return [
-                ...state,
-                // todo(undefined, action)
-            ];
-        case 'TOGGLE_TODO':
-            // return state.map(t => 
-            //     todo(t, action))
-        break;
-        default:
-            return state
-    }
-}
+  switch (action.type) {
+    case "ADD_TODO":
+      return [
+        ...state,
+        {
+            id: action.id,
+            todo: action.payload,
+            completed: false
+        }        
+      ];
+    case "TOGGLE_TODO":
+        return [
+            ...state
+        ]
+    default:
+      return state;
+  }
+};
 export default todos;
