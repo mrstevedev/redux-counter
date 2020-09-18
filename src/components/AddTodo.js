@@ -15,7 +15,8 @@ const AddTodo = () => {
           name="todo"
           onChange={(event) => setVal(event.target.value)}
         />
-        <button type="button" onClick={() => dispatch(addTodo(val))}>
+        <button type="button" onClick={() => val ? dispatch(addTodo(val)) : null} 
+            style={{ background: '#9E9E9E', color:' rgb(0 0 0)', fontWeight: 'bold' }}>
           Add Todo
         </button>
       </form>
