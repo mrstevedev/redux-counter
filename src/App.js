@@ -1,11 +1,14 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, logIn } from "./actions";
+import TodoList from './components/TodoList';
 import "./App.css";
+import AddTodo from "./components/AddTodo";
 
 function App() {
   const counter = useSelector((state) => state.counter);
   const isLogged = useSelector((state) => state.isLogged);
+  const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
   return (
@@ -19,11 +22,8 @@ function App() {
         <button onClick={() => dispatch(logIn())}>Sign in</button>
       </div>
       {isLogged ? <p>Logged in info here</p> : ""}
-      <form>
-        <h4>Add Todo</h4>
-        <input type="text" id="todo" name="todo" />
-        <button type="button">Add Todo</button>
-      </form>
+      <AddTodo />
+      <TodoList todos={todos} />
     </div>
   );
 }
