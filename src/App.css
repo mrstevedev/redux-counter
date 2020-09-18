@@ -44,3 +44,22 @@ input[type="text"] {
 input[type="text"]:hover {
   background: #333;
 }
+
+ul {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+li {
+  padding: 6px;
+  transition: .12s ease-in-out;
+}
+
+li:hover {
+  background: #0c0c0c;
+}
+
+li:nth-child(even) {
+  background: #0c0c0c;
+}
